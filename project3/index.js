@@ -29,9 +29,9 @@ function getDogImages(breed){
                 return response.json()
             }
             else {
-                console.log('not found')
+                
                 return Promise.reject({
-                    message: "not found"
+                    message: "That breed was not found.  Please try a different breed."
                 })
             }
             
@@ -42,11 +42,14 @@ function getDogImages(breed){
     }
         )
     .catch(item=>
-        alert(item.message)
+        $('#picture-display').html(`<h2>${item.message}</h2>`)
+
+    
+        
 
 
 )
 
     
 }
-watchForm()
+$(watchForm)
