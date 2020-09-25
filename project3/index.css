@@ -1,0 +1,17 @@
+* {
+    box-sizing:border-box;
+}
+#picture-display {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+img {
+    width: 50%;
+    
+}
+.hidden{
+    display: none;
+}
+
